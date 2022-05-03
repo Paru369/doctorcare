@@ -13,6 +13,7 @@
   --brand-bege: hsla(39, 100%, 97%, 1);
   --green-light: hsla(148, 23%, 89%, 1);
   font-size: 62.5%;
+  --nav-height: 7.2rem;
 }
 
 body {
@@ -23,8 +24,9 @@ body {
 
 .wrapper {
   width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+  
 }
 
 /* HEADER ######################################################## */
@@ -32,7 +34,7 @@ body {
 header::before {
   content: '';
   width: 100vw;
-  height: 108rem;
+  height: calc(108rem  + var(--nav-height));
   background-color: var(--green-light);
   display: block;
   position: absolute;
@@ -42,7 +44,7 @@ header::before {
 }
 
 header {
-  margin-top: 4.1rem;
+  margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header h4 {
@@ -134,8 +136,37 @@ header img {
 
 nav {
   display: flex;
+ 
+
+  height: var(--nav-height);
+
+  position: fixed;  
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .wrapper{
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 2.4rem;
-  padding-block: 1.6rem;
+
+
+}
+
+nav.scroll{
+
+  background-color: var(--fc-primary-color);
+  width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path{
+  fill: white;
+  
+
+}
+nav.scroll svg:nth-child(2) path{
+  stroke: white;
+  
+
 }
