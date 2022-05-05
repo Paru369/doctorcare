@@ -1,6 +1,8 @@
 # DOCTOR CARE
 EM EXECUÇÃO
 
+<img src="./assets/Screenshot.png"> 
+
 Página web criada em HTML e CCS e JavaScritp partir de layout no figma.
 Desafio do NLW da  da Rockeseat. 
 
@@ -14,7 +16,10 @@ Deploy:
 
 
 
-## 🚀 Começando
+## 🚀 Começando - 
+
+DoctorCare é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de empresas. 
+
 
 Executar index.html
 
