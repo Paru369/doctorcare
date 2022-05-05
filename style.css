@@ -13,6 +13,9 @@
   --fc-secundarywithe: hsla(0, 0%, 100%, 1);
   --brand-bege: hsla(39, 100%, 97%, 1);
   --green-light: hsla(148, 23%, 89%, 1);
+  --bg-light: hsla(180, 14%, 97%, 1);
+
+
   font-size: 62.5%;
   --nav-height: 7.2rem;
 }
@@ -27,6 +30,8 @@ body {
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
+  background-color: var(--bg-light);
+  
 }
 
 ul{
@@ -38,6 +43,10 @@ ul{
   margin-inline: auto;
   padding-inline: 2.4rem;
   
+}
+section{
+
+  padding-block: 10rem;
 }
 
 /* HEADER ######################################################## */
@@ -301,3 +310,55 @@ body.menu-expended button svg path{
   
 
 }
+
+/* Services  ######################################################## */
+
+#services header h4{
+
+font-weight: 700;
+font-size: 1.4rem;
+line-height: 150%;
+letter-spacing: 0.08rem;
+text-transform: uppercase;
+margin-bottom: 1.6rem;
+
+}
+
+
+#services header h2{
+
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+  text-align: center;
+  color: var(--fc-headline);
+  margin-bottom: 6rem;
+  
+  }
+
+  #services .cards{
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem
+    
+    }
+
+  #services .card{
+
+    padding: 2.4rem;
+    text-align: left;
+    background: #FFFFFF;
+    border: 1px solid var(--green-light);
+    border-radius: .6rem;
+
+
+  }
+
+  #services .card h3{
+
+    margin-block: 1.6rem;
+
+  }
+
+
