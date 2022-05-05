@@ -20,6 +20,13 @@
   --nav-height: 7.2rem;
 }
 
+
+html{
+
+  scroll-behavior: smooth;
+
+}
+
 html, body{
   width: 100%;
   height: 100%;
@@ -38,6 +45,11 @@ ul{
   list-style: none;
 }
 
+img{
+
+  max-width: 100%;
+}
+
 .wrapper {
   width: 37.5rem;
   margin-inline: auto;
@@ -48,10 +60,160 @@ section{
 
   padding-block: 10rem;
 }
+/* Section  ######################################################## */
 
-/* HEADER ######################################################## */
+section header h4{
 
-header::before {
+  font-size: 1.4rem;
+  color: var(--fc-primary-color);
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1,6rem;
+
+}
+
+section header h2{
+
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+  text-align: center;
+  color: var(--fc-headline);
+
+ 
+
+
+}
+
+section header h1{
+
+  
+    font-size: 3.4rem;
+    color: var(--fc-headline);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+  
+
+}
+
+section .content p{
+
+color: var(--fc-paragraph);
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 150%;
+
+}
+
+
+
+
+
+
+
+
+/* navigation  ######################################################## */
+
+nav {
+  display: flex;
+ 
+
+  height: var(--nav-height);
+
+  position: fixed;  
+  top: 0;
+  width: 100vw;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  z-index: 100;
+}
+
+nav .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+nav.scroll{
+
+  background-color: var(--fc-primary-color);
+  width: 100vw;
+  
+}
+
+nav.scroll .logo path{
+  fill: white;
+  
+
+}
+nav.scroll button path{
+  stroke: white;
+  
+}
+
+nav button{
+  background: none;
+  border:none;
+  cursor: pointer;
+}
+
+/* Menu expended  ######################################################## */
+body.menu-expended{
+  overflow: hidden ;
+}
+
+body.menu-expended > :not(nav) {
+
+  visibility: hidden;
+
+}
+
+
+.menu,
+.close-menu,
+body.menu-expended .open-menu{
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+body.menu-expended .menu,
+body.menu-expended .close-menu{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.menu{
+
+  transform: translateY(100%);
+}
+
+body.menu-expended .menu{
+
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: var(--fc-primary-color);
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--nav-height);
+
+  transition: transform 300ms;
+  transform: translateX(0);
+
+
+}
+
+
+/* HOME  ######################################################## */
+
+#home::before {
   content: '';
   width: 100%;
   height: calc(108rem  + var(--nav-height));
@@ -63,24 +225,22 @@ header::before {
   z-index: -1;
 }
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+
+
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
+  
 }
 
-header h4 {
+/* #home h4 {
   font-size: 1.4rem;
   color: var(--fc-primary-color);
   margin-bottom: 1.6rem;
-}
+} */
 
-h1 {
-  font-size: 3.4rem;
-  color: var(--fc-headline);
-  line-height: 130%;
-  margin-bottom: 2.4rem;
-}
 
-p {
+
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -88,7 +248,7 @@ p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   background-color: var(--fc-primary-color);
 
   border: none;
@@ -112,14 +272,14 @@ header button {
   margin-right: auto;
 }
 
-header img {
+#home img {
   display: block;
   margin-inline: auto;
   object-position: 0 2rem;
   width: 26.4rem;
 }
 
-.stats {
+#home .stats {
   width: 32.7rem;
   height: 47rem;
   padding-block: 4rem;
@@ -135,14 +295,14 @@ header img {
   border-color: var(--brand-bege);
 }
 
-.stat p {
+#home .stat p {
   margin: 0;
   color: var(--fc-primary-color);
   font-weight: 400;
   line-height: 150%;
 }
 
-.stat h3 {
+#home .stat h3 {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
@@ -152,97 +312,13 @@ header img {
   margin-bottom: 0.4rem;
 }
 
-/* navigation  ######################################################## */
-
-nav {
-  display: flex;
- 
-
-  height: var(--nav-height);
-
-  position: fixed;  
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-nav .wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
-}
-
-nav.scroll{
-
-  background-color: var(--fc-primary-color);
-  width: 100vw;
-}
-
-nav.scroll svg:nth-child(1) path{
-  fill: white;
-  
-
-}
-nav.scroll button path{
-  stroke: white;
-  
-}
-
-nav button{
-  background: none;
-  border:none;
-  cursor: pointer;
-}
-
-/* Menu expended  ######################################################## */
-body.menu-expended{
-  overflow: hidden ;
-}
-
-body.menu-expended > :not(nav) {
-
-  display:none
-
-}
-
-
-.menu,
-.close-menu,
-body.menu-expended .open-menu{
-
-  opacity: 0;
-  visibility: hidden;
-}
 
 
 
-body.menu-expended .menu,
-body.menu-expended .close-menu{
-  opacity: 1;
-  visibility: visible;
-}
-
-
-
-body.menu-expended .menu{
-
-  position: fixed;
-  top:0;
-  left:0;
-  background-color: var(--fc-primary-color);
-  width: 100vw;
-  height: 100vh;
-  padding-top: var(--nav-height);
-
-
-}
-
-body.menu-expended nav{
+/* body.menu-expended nav{
 
   position: relative;
-}
+} */
 
 .social-links{
 
@@ -313,7 +389,7 @@ body.menu-expended button svg path{
 
 /* Services  ######################################################## */
 
-#services header h4{
+/* #services header h4{
 
 font-weight: 700;
 font-size: 1.4rem;
@@ -321,6 +397,7 @@ line-height: 150%;
 letter-spacing: 0.08rem;
 text-transform: uppercase;
 margin-bottom: 1.6rem;
+color: var(--fc-primary-color);
 
 }
 
@@ -332,8 +409,13 @@ margin-bottom: 1.6rem;
   line-height: 3.9rem;
   text-align: center;
   color: var(--fc-headline);
-  margin-bottom: 6rem;
+  margin-bottom: 6rem}
+   */
   
+
+  #services header h2 {
+    
+    margin-bottom: 6rem;
   }
 
   #services .cards{
@@ -360,5 +442,35 @@ margin-bottom: 1.6rem;
     margin-block: 1.6rem;
 
   }
+
+ 
+
+  /* Services  ######################################################## */
+
+  #about{
+
+    text-align: left;
+    background-color: var(--brand-bege);
+  }
+
+  #about header h2{
+    margin-bottom: 2.4rem;
+    margin-top: 6rem;
+
+
+
+  }
+
+
+
+
+  #about p{
+
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+    font-size: 1.6rem;
+    
+  
+   }
 
 
