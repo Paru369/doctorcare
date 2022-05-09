@@ -1,15 +1,17 @@
 # DOCTOR CARE
-EM EXECUÇÃO
 
-<img src="./assets/Screenshot.png"> 
 
+<img height="300px" src="./assets/Screenshot.png"> 
+
+
+Deploy: https://paru369.github.io/doctorcare/
 Página web criada em HTML e CCS e JavaScritp partir de layout no figma.
 Desafio do NLW da  da Rockeseat. 
 
 Figma https://www.figma.com/file/0OuLNi7z83yeoeUdohXcfs/DoctorCare-(Community)?node-id=0%3A1
 
 
-Deploy:
+
 
 
 
@@ -19,7 +21,7 @@ Deploy:
 ## 🚀 Começando - 
 
 DoctorCare é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de empresas. 
-
+Deploy: https://paru369.github.io/doctorcare/
 
 Executar index.html
 
